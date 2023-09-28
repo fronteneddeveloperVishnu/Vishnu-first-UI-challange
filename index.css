@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=League+Spartan:wght@100;200;300;400;500;600&family=Manrope:wght@200;300;400;500;600;700;800&family=Mulish:wght@200&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;1,300&display=swap");
+
+:root {
+  --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --Grayish-Blue: hsl(212, 23%, 69%);
+  --Light-Grayish-Blue: hsl(210, 46%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  color: var(--Very-Dark-Grayish-Blue);
+}
+
+html,body{
+    width: 100%;
+    height: auto;
+    background: var(--Light-Grayish-Blue);
+}
+
+body{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 25.16rem;
+    border-radius: 10px;
+    background: white;
+}
+
+.card-image{
+    overflow: hidden;
+    height: 15.3rem;
+    border-radius: 10px 0 0 10px;
+}
+
+.card-main{
+    padding: 42px 32px 0;
+    background-color: white;
+}
+
+.card-content > p{
+    font-size: 1.1rem;
+    padding: 24px 0;
+    line-height: 1.5rem;
+}
+
+.card-user{
+    position: relative;
+    width: 100%;
+    padding: 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+}
+
+.user > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info > p:first-child{
+    font-weight: 700;
+
+}
+.user-info >p:last-child{
+    font-weight: 100;
+}
+
+.icon-share{
+    position: relative;
+    z-index: 5;
+    background: var(--Light-Grayish-Blue);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon-share:hover .i-share{
+    fill: var(--Light-Grayish-Blue);
+    animation: shareAnimation .2s linear;
+}
+
+@keyframes shareAnimation {
+    from {
+
+    }
+    
+    to{
+        transform: translateX(1px);
+    }
+}
+
+.icon-share:hover {
+    background: var(--Very-Dark-Grayish-Blue);
+    transition: background 100ms linear;
+}
+
+.network{
+    position: absolute;
+    top: 5px;
+    left: -32px;
+    width: 25rem;
+    height: 75px;
+    padding: 2rem;
+    border-radius: 0 0 10px 10px;
+    background: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.network p {
+    font-size: 1.3rem;
+    font-weight: 100;
+    color: var(--Grayish-Blue);
+    margin-right: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.icons-network a svg{
+    font-size: 1.7rem;
+    margin: auto 0.7rem;
+}
+
+@media (min-width: 1024px) {
+    .card {
+        width: 730px;
+        height: 280px;
+        display: flex;
+        background: white;
+    }
+
+    .card-image{
+        overflow: hidden;
+        flex: 1 0 285px;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+    }
+
+    .card-image>img{
+        width: 120%;
+    }
+
+    .network{
+        width: 22rem;
+        height: 50px;
+        top: -60px;
+        left: 59%;
+        border-radius: 10px;
+        justify-content: center;
+    }
+
+    .card-user{
+        margin-bottom: 100px;
+    }
+
+    .network::after{
+        content: '';
+        position: absolute;
+        top: 52px;
+        display: block;
+        border-radius: 15px;
+        border-style: solid;
+        border-color: var(--Very-Dark-Grayish-Blue) transparent transparent;
+    }
+}
+
